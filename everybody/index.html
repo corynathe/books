@@ -13,7 +13,7 @@
     <div class="hard">
         <img src="images/cover.png" alt="" />
     </div>
-    <div class="hard"></div>
+    <div class="hard extra"></div>
     <div>
         <img src="images/toddler1.png" alt="" />
         <div style="padding-left: 5vw;"><large>A</large>&nbsp;<medium>is for Adam. <large>A</large>dam poops.</medium></div>
@@ -74,7 +74,7 @@
         <div style="padding-left: 5vw;"><large>G</large><medium>irls don't poop...</medium></div>
         <div style="padding-left: 5vw; padding-bottom: 5vh;"><large>T</large><medium>hat's gross.</medium></div>
     </div>
-    <div class="hard"></div>
+    <div class="hard extra"></div>
     <div class="hard"></div>
 </div>
 
@@ -88,6 +88,7 @@
     if (width < height) {
         display = "single";
         height = Math.min(height, width * 4/3);
+        $(".extra").remove();
     } else {
         singlePageWidth = width / 2;
         height = Math.min(height, singlePageWidth * 4/3);
