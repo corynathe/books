@@ -16,13 +16,6 @@ body {
 	background: #eeeeee;
 }
 
-.flipbook {
-    height: 95vh;
-    max-height: 575px;
-    width: 95vw;
-    max-width: 1000px;
-}
-
 .flipbook .hard {
     background: #f7eacb !important;
     color: #fff;
@@ -53,18 +46,15 @@ body {
 
 .flipbook .page large{
     display: inline-block;
-	//font-size: 30px;
 	font-size: 200%;
 }
 
 .flipbook .page medium{
     display: inline-block;
-	//font-size: 18px;
 	font-size: 100%;
 }
 
 .flipbook .page small{
     display: inline-block;
-	//font-size: 14px;
 	font-size: 75%;
 }
