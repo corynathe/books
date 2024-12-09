@@ -75,26 +75,44 @@
         <div style="padding-left: 5vw; padding-bottom: 5vh;"><large>T</large><medium>hat's gross.</medium></div>
     </div>
     <div class="hard extra"></div>
-    <div class="hard"></div>
+    <div class="hard extra"></div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="turn.js"></script>
 <script>
-    let height = $(window).height() * 0.95;
-    let width = Math.min(1000, $(window).width() * 0.95);
-    let singlePageWidth = width;
-    let display = "double";
-    if (width < height) {
-        display = "single";
-        height = Math.min(height, width * 4/3);
-        $(".extra").remove();
-    } else {
-        singlePageWidth = width / 2;
-        height = Math.min(height, singlePageWidth * 4/3);
+    const pageHeight = $(window).height() * 0.95;
+    const pageWidth = $(window).width() * 0.95;
+
+    let display = "single";
+    let height = pageHeight;
+    let width = height * 3.5/4;
+
+    if (width > pageWidth) {
+        width = pageWidth;
+        height = width * 4/3.5;
+    } else if (width * 2 < pageWidth) {
+        width = width * 2;
+        display = "double";
+    } if ((pageWidth - width) > 200) {
+        width = pageWidth;
+        height = (width / 2) * 4/3.5;
+        display = "double";
     }
 
-    document.body.style.fontSize = singlePageWidth < 400 ? "14px" : "18px";
+    let singlePageWidth = width / 2;
+    if (display === "single") {
+        singlePageWidth = width;
+        $(".extra").remove();
+    }
+    document.body.style.fontSize = "18px";
+    if (singlePageWidth < 300) {
+        document.body.style.fontSize = "10px";
+    } else if (singlePageWidth < 350) {
+        document.body.style.fontSize = "12px";
+    } else if (singlePageWidth < 400) {
+        document.body.style.fontSize = "14px";
+    }
 
     $(".flipbook").turn({
         display,
@@ -102,12 +120,11 @@
         height
     });
 
-    $(window).bind('keydown', function(e){
+    $(window).bind('keydown', function(e) {
 		if (e.keyCode==37)
 			$('.flipbook').turn('previous');
 		else if (e.keyCode==39)
 			$('.flipbook').turn('next');
-
 	});
   </script>
 </body>
