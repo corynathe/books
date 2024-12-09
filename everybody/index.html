@@ -94,7 +94,7 @@
     } else if (width * 2 < pageWidth) {
         width = width * 2;
         display = "double";
-    } if ((pageWidth - width) > 200) {
+    } if ((pageWidth - width) > 200 && ((width / 2) * 4/3.5 < pageHeight)) {
         width = pageWidth;
         height = (width / 2) * 4/3.5;
         display = "double";
