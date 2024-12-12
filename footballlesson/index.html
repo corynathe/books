@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Football Game and the Big Lesson</title>
+</head>
+
+<body>
+<div class="flipbook">
+    <div class="hard">
+        <img src="images/cover.png" alt="" />
+    </div>
+    <div class="hard extra"></div>
+    <div>
+        <img src="images/1.png" alt="" />
+        <div style="padding: 5vh 5vw;">
+            <medium>Ethan loved playing football at recess. Every day, he and his friends would
+            meet on the field and toss the ball around, laughing and having fun. One sunny afternoon, a group of
+            older boys came over to join the game. At first, Ethan was excited. "Cool! Now we have more players!"
+            he thought.</medium>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <medium>But as the game went on, Ethan noticed something. The older boys were not playing very nicely.
+                They weren’t sharing the ball, and they were saying things that made some of Ethan’s friends feel bad.</medium>
+            <br/><br/>
+            <medium>"Hey, you’re too slow!" one of the older boys said to Ethan’s friend, Jack. Jack looked down
+                at his shoes, feeling embarrassed.</medium>
+            <br/><br/>
+            <medium>Ethan didn't like seeing his friend upset. He thought about what to do. He could get angry and
+                yell back, but that didn’t feel right. Instead, he took a deep breath and walked over to the
+                older boys.</medium>
+            <br/><br/>
+            <medium>“Hey, guys,” Ethan said calmly, “we’re all here to have fun. It’s not cool to leave anyone out
+                or make them feel bad.”</medium>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <medium>The older boys stopped and looked at Ethan. For a moment, they didn’t say anything.</medium>
+            <br/><br/>
+            <medium>"Why don’t we try playing a fair game where everyone gets a chance?" Ethan added. "That way,
+                it’ll be more fun for all of us."</medium>
+            <br/><br/>
+            <medium>One of the older boys, who had been the loudest, shrugged. “Alright, fine,” he said,
+                tossing the ball back to Ethan. “Let’s just play.”</medium>
+            <br/><br/>
+            <medium>From then on, the game became more enjoyable. Ethan made sure everyone got a turn with the ball,
+                and the older boys started playing more kindly too. Jack smiled again, and everyone was laughing
+                together like before.</medium>
+        </div>
+    </div>
+    <div>
+        <img src="images/2.png" alt="" />
+        <div style="padding: 5vh 5vw;">
+            <medium>At the end of recess, as they were heading back to class, one of the older boys patted Ethan
+                on the back. “You’re pretty cool,” he said.</medium>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <medium>Ethan smiled, feeling proud. He had learned something important that day: when people aren’t
+                being kind, sometimes the best thing to do is to stay calm, speak up, and remind everyone what
+                really matters—having fun and being kind to each other.</medium>
+        </div>
+    </div>
+    <div class="hard extra"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../turn.js"></script>
+<script>
+    const pageHeight = $(window).height() * 0.95;
+    const pageWidth = $(window).width() * 0.95;
+
+    let display = "single";
+    let height = pageHeight;
+    let width = height * 3.5/4;
+
+    if (width > pageWidth) {
+        width = pageWidth;
+        height = width * 4/3.5;
+    } else if (width * 2 < pageWidth) {
+        width = width * 2;
+        display = "double";
+    } if ((pageWidth - width) > 200 && ((width / 2) * 4/3.5 < pageHeight)) {
+        width = pageWidth;
+        height = (width / 2) * 4/3.5;
+        display = "double";
+    }
+
+    let singlePageWidth = width / 2;
+    if (display === "single") {
+        singlePageWidth = width;
+        $(".extra").remove();
+    }
+    document.body.style.fontSize = "18px";
+    if (singlePageWidth < 300) {
+        document.body.style.fontSize = "10px";
+    } else if (singlePageWidth < 350) {
+        document.body.style.fontSize = "12px";
+    } else if (singlePageWidth < 400) {
+        document.body.style.fontSize = "14px";
+    }
+
+    $(".flipbook").turn({
+        display,
+        width,
+        height
+    });
+
+    $(window).bind('keydown', function(e) {
+		if (e.keyCode==37)
+			$('.flipbook').turn('previous');
+		else if (e.keyCode==39)
+			$('.flipbook').turn('next');
+	});
+  </script>
+</body>
+
+</html>
