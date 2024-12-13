@@ -74,7 +74,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../turn.js"></script>
 <script>
-    const pageHeight = $(window).height() * 0.95;
+    const pageHeight = Math.min(625, $(window).height() * 0.95);
     const pageWidth = $(window).width() * 0.95;
 
     let display = "single";
