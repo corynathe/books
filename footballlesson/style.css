@@ -30,8 +30,7 @@ body {
     background: white;
 	display: flex;
 	flex-direction: column;
-	//justify-content: center;
-	align-items: start;
+    justify-content: space-between;
     border: 1px solid rgba(0, 0, 0, 0.11);
 }
 
