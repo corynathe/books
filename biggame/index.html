@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Grayson's Big Game</title>
+</head>
+<body>
+<div class="flipbook">
+    <div class="hard">
+        <img src="images/cover.png" alt="" />
+    </div>
+    <div class="hard extra"></div>
+    <div>
+        <img src="images/1.png" alt="" />
+        <div style="padding: 5vh 5vw;">
+            <p>It was a sunny Saturday morning, and Grayson was so excited. He was five years old, and today was the
+                day of his big basketball game! He had been practicing his dribbling, layups, and passing with his dad
+                all week. He just knew he was going to be a star player.</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>When Grayson got to the gym, he put on his shiny blue jersey and joined his team on the court. The
+                game started, and right away, something didn’t feel right. The other team was scoring lots of points,
+                and his team was having trouble keeping up.</p>
+            <br/><br/>
+            <p>Grayson frowned. "This isn’t fair!" he said to himself. He missed a pass and stomped his foot.
+                "They have all the good players!" he muttered as he walked back to the middle of the court.</p>
+            <br/><br/>
+            <p>A few minutes later, Grayson missed another shot. He looked at the referee and shouted, “That
+                was a foul!” He threw his hands in the air, feeling really upset.</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>Coach Carter, a kind and wise man with a gray beard and twinkling eyes, noticed Grayson’s frustration.
+                During the next time-out, he gently called Grayson over to the bench.</p>
+            <br/><br/>
+            <p>“Grayson, why don’t you come sit with me for a minute?” Coach Carter said, resting a hand on
+                Grayson's shoulder.</p>
+            <br/><br/>
+            <p>Grayson slumped down on the bench. "Coach, this game isn’t fair. The other team is too good, and the
+                refs aren’t calling the fouls right. I keep messing up!"</p>
+            <br/><br/>
+            <p>Coach Carter nodded and smiled softly. "I see you're upset, buddy. But let me tell you something
+                really important, okay?"</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>Grayson looked up, curious.</p>
+            <br/><br/>
+            <p>“Sometimes, things won’t go our way in games, or even in life. But complaining won’t help us or our
+                team. It just makes us more upset. What really matters is staying calm and being a good teammate."</p>
+            <br/><br/>
+            <p>Grayson blinked. "But Coach, the other team has all the best players."</p>
+            <br/><br/>
+            <p>Coach Carter chuckled. "Maybe it feels that way, but basketball isn’t just about having the best
+                players. It's about working together. Everyone has strengths. You may not score every basket, but
+                you can help your team in other ways—by passing, cheering, or playing good defense.</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>And when we stay calm and kind, even when the game feels unfair, that’s how we show we're true team players."</p>
+            <br/><br/>
+            <p>Grayson thought about that for a moment. "But the refs are making bad calls," he said quietly.</p>
+            <br/><br/>
+            <p>Coach Carter nodded again. "Sometimes, it might feel like the refs miss things. But they're doing
+                their best, just like you are. The best thing we can do is respect them and keep playing. Being
+                kind to the referees shows that you can handle tough situations with grace. And remember, it's not
+                just about winning the game. It's about having fun, learning, and growing as a person. That’s the
+                real victory."</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>Grayson took a deep breath. "So... even if the game doesn’t seem fair, I should still try my best
+                and help my team?"</p>
+            <br/><br/>
+            <p>"Exactly," Coach Carter said, smiling wide. "Because when you work together, lift each other up, and
+                stay positive, that’s how you become a winner in life. The scoreboard doesn’t always show the most
+                important victories."</p>
+            <br/><br/>
+            <p>Grayson felt a little better. "Okay, Coach. I’ll try to be a better teammate."</p>
+        </div>
+    </div>
+    <div>
+        <div style="padding: 5vh 5vw;">
+            <p>Coach Carter patted him on the back. "I know you will. Now, get out there and show your team what
+                being a great teammate looks like!"</p>
+            <br/><br/>
+            <p>Grayson jumped off the bench with a big smile. He ran back onto the court, ready to play again.
+                This time, he didn’t worry about whether the teams were fair. Instead, he focused on passing the
+                ball, encouraging his teammates, and playing his best.</p>
+            <br/><br/>
+            <p>And you know what? His team started to do better! They might not have won that day, but Grayson felt
+                proud. He had fun, worked with his team, and learned that being kind and a good teammate is more
+                important than anything else.</p>
+        </div>
+    </div>
+    <div>
+        <img src="images/2.png" alt="" />
+        <div style="padding: 5vh 5vw;">
+            <p>As he high-fived his friends at the end of the game, Grayson knew that he had won something much
+                bigger than just points on a scoreboard.</p>
+            <br/><br/>
+            <p>And from that day on, Grayson played every game with a big smile, a calm heart, and a spirit of teamwork.</p>
+            <br/><br/>
+            <p>The end.</p>
+        </div>
+    </div>
+    <div class="hard extra"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../turn.js"></script>
+<script>
+    const pageHeight = Math.min(600, $(window).height() * 0.95);
+    const pageWidth = $(window).width() * 0.95;
+
+    let display = "single";
+    let height = pageHeight;
+    let width = height * 3.5/4;
+
+    if (width > pageWidth) {
+        width = pageWidth;
+        height = width * 4/3.5;
+    } else if (width * 2 < pageWidth) {
+        width = width * 2;
+        display = "double";
+    } if ((pageWidth - width) > 200 && ((width / 2) * 4/3.5 < pageHeight)) {
+        width = pageWidth;
+        height = (width / 2) * 4/3.5;
+        display = "double";
+    }
+
+    let singlePageWidth = width / 2;
+    if (display === "single") {
+        singlePageWidth = width;
+        $(".extra").remove();
+    }
+
+    if (singlePageWidth < 300) {
+        document.body.style.fontSize = "10px";
+    } else if (singlePageWidth < 325) {
+        document.body.style.fontSize = "11px";
+    } else if (singlePageWidth < 350) {
+        document.body.style.fontSize = "12px";
+    } else if (singlePageWidth < 375) {
+        document.body.style.fontSize = "13px";
+    } else if (singlePageWidth < 400) {
+        document.body.style.fontSize = "14px";
+    } else if (singlePageWidth < 425) {
+        document.body.style.fontSize = "15px";
+    } else if (singlePageWidth < 450) {
+        document.body.style.fontSize = "16px";
+    } else if (singlePageWidth < 475) {
+        document.body.style.fontSize = "17px";
+    } else if (singlePageWidth < 500) {
+        document.body.style.fontSize = "18px";
+    } else if (singlePageWidth < 525) {
+        document.body.style.fontSize = "19px";
+    } else {
+        document.body.style.fontSize = "20px";
+    }
+
+    //$(".flipbook").turn(‘zoom’, 0.5, 0);
+
+    $(".flipbook").turn({
+        display,
+        width,
+        height
+    });
+
+    $(window).bind('keydown', function(e) {
+		if (e.keyCode==37)
+			$('.flipbook').turn('previous');
+		else if (e.keyCode==39)
+			$('.flipbook').turn('next');
+	});
+  </script>
+</body>
+
+</html>
